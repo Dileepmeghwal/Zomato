@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Okra, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+.banner {
+  width: 100%;
+  background: url(../images/ambitious-creative-co-rick-barrett-1N_YsUPLnmA-unsplash.jpg)
+    rgba(25, 25, 25, 0.665);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  overflow: hidden;
+  min-height: 70vh;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60;
+}
+.nav-brand .logo {
+  font-size: 15px;
+  color: #f8f8f8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.profile-details a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  left: -130px;
+  top: 30px;
+}
+.profile img {
+  border-radius: 100%;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(40px);
+}
+.content .heading {
+  font-size: 4.8rem;
+  color: #fff;
+  font-weight: 800;
+  font-style: italic;
+  font-family: Okra, Helvetica, sans-serif;
+}
+.content p {
+  color: #f8f8f8;
+  font-size: 25px;
+  line-height: 30px;
+}
+.form-section {
+  margin-top: 1rem;
+}
+.input-area {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+.input-area input {
+  width: 80%;
+  padding: 13px 5px;
+  margin: 0;
+  border: 0;
+  font-family: Okra, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.input-area input:focus {
+  outline: none;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  border-radius: 100%;
+}
+.mobile-logo {
+  display: none;
+}
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 12px;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.arrow {
+  position: relative;
+  top: -22px;
+  left: 90px;
+  cursor: pointer;
+  color: #f8f8f8;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+.option-list {
+  width: 150px;
+  background-color: #ffffff;
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+  line-height: 30px;
+  display: none;
+  transition: all 0.333s ease;
+  margin-top: -80px;
+  position: absolute;
+  top: 130px;
+  left: 0;
+}
+.option.active .arrow {
+  transform: rotate(180deg);
+}
+.option.active .option-list {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* menu-conteiner */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+}
+
+.profile{
+  position: relative;
+}
+.list-menu{
+  position: absolute;
+  top: 10px;
+  left: 35px;
+  color: #f8f8f8;
+  
+}
+
+
+.menu-conatiner{
+  margin-top: 5%;
+  padding: 5% 1rem;
+}
+.card-box{
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-box img{
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+.card-box .text{
+  padding: 1rem .8rem;
+}
+.heading .grid{
+  display: grid;
+  grid-template-columns: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+  }
+  .nav-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    background-color: #ae1d1d;
+    transition: all 0.3s ease-in-out;
+    min-height: 60%;
+    z-index: 1;
+  }
+  .profile {
+    position: absolute;
+    left: 20px;
+    bottom: 100px;
+  }
+  .mobile-logo {
+    display: block;
+  }
+  .mobile-logo h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-style: italic;
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .nav-brand {
+    position: absolute;
+    left: 20px;
+    top: 130px;
+    color: #fff;
+  }
+  .profile-details a {
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    top: 180px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+  .nav-menu.active {
+    top: 0;
+  }
+}
